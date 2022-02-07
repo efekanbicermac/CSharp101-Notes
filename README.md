@@ -1,2 +1,12 @@
-# PatikaDev-C-101-Homework
-C# dilini bilmeme rağmen pekiştirmek için Patika.dev üzerinden C# 101 eğitimini alıyorum. 
+# Homework 1;
+
+## Kullanıcıdan Adını ve Soyadını Girmesini iste, daha sonra ise kişinin adı ve soyadı ile birlikte tek bir cümlede "Hoşgeldin isim1,soyisim1" şeklinde yazdır.
+~~~C#
+            Console.WriteLine("Please Enter Your Name");
+            string name1 = Console.ReadLine();
+            Console.WriteLine("Please Enter Your Surname");
+            string name2 = Console.ReadLine();
+            
+            Console.WriteLine($"Welcome {name1} {name2}");
+          
+~~~    
