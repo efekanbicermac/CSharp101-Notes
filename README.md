@@ -10,6 +10,7 @@
             Console.WriteLine($"Welcome {name1} {name2}");
           
 ~~~    
+# Homework 2;
 ## Değişkenler ve Veri Tipleri 
 ~~~csharp
    
