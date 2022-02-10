@@ -28,3 +28,52 @@
             long l = 4; // 8byte 
             ulong ul = 4; // 16byt
 ~~~   
+#Homework 3;
+## Operatorler
+~~~csharp
+ //Atama
+            int a = 3;
+            int b = 4;
+            //İşlemli Atama
+            b = b + 3;
+            b += 3;
+            b /= 3;
+            b *= 3;
+
+            //Mantıksal Operatorler
+            // ||, &&, !
+
+            bool isSuccess = true;
+            bool isCompleted = false;
+
+            if (isSuccess && isCompleted)
+                Console.WriteLine("Well Done");
+            if (isSuccess || isCompleted)
+                Console.WriteLine("Perfect");
+            if (isSuccess && !isCompleted)
+                Console.WriteLine("Great");
+
+            //İlişkisel Operatorler
+            // <, >, <=, >=, ==, != 
+
+            int x = 3;
+            int y = 4;
+            bool sonuc = a < b;
+
+            Console.WriteLine(sonuc);
+            sonuc = a < b;
+            Console.WriteLine(sonuc);
+            sonuc = a >= b;
+            Console.WriteLine(sonuc);
+            sonuc = a <= b;
+            Console.WriteLine(sonuc);
+            sonuc = a == b;
+            Console.WriteLine(sonuc);
+            sonuc = a != b;
+
+            //Aritmetik Operatorler
+            // /, +, -, *
+
+            // % MOD ALMA YANI BOLME ISLEMINDEN KALANI BULMA
+
+~~~
