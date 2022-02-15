@@ -28,7 +28,7 @@
             long l = 4; // 8byte 
             ulong ul = 4; // 16byt
 ~~~   
-#Homework 3;
+# Homework 3;
 ## Operatorler
 ~~~csharp
  //Atama
@@ -76,7 +76,7 @@
 
             // % MOD ALMA YANI BOLME ISLEMINDEN KALANI BULMA
 ~~~
-#Homework 4;
+# Homework 4;
 ## Expection Handler
 ~~~csharp
 //TRY CATCH YONTEMI ILE HATA BULMA
