@@ -75,5 +75,42 @@
             // /, +, -, *
 
             // % MOD ALMA YANI BOLME ISLEMINDEN KALANI BULMA
+~~~
+#Homework 4;
+## Expection Handler
+~~~csharp
+//TRY CATCH YONTEMI ILE HATA BULMA
 
+            try
+            {
+                Console.WriteLine("Lutfen Yasinizi Giriniz : ");
+                int yas = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"Girdiginiz yas {yas}");
+            }
+
+            catch(Exception Exc)
+            {
+                Console.WriteLine($"Hata: {Exc.Message.ToString()}");
+            }
+            finally
+            {
+                Console.Write("Isleminiz Tamamlandi");
+            }
+
+            //Format ve OverFlow Hatasi
+            try
+            {
+                int a = int.Parse("-99999");
+            }
+            catch(FormatException ex)
+            {
+                Console.WriteLine("Bos deger girdiniz");
+                Console.WriteLine(ex);
+            }
+
+            catch ( OverflowException OFex )
+            {
+                Console.WriteLine("Cok kucuk yada Asiri Buyuk deger girdiniz");
+                Console.WriteLine(OFex);
+            }
 ~~~
