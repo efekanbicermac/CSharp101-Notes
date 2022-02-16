@@ -115,7 +115,7 @@
             }
 ~~~
 # Homework 5;
-## Karar Döngüleri 1
+## Karar Yapıları 1
 ~~~csharp
 //  If Else Between Kullanımı
             int time = DateTime.Now.Hour;
