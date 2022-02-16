@@ -131,3 +131,31 @@
             else
             Console.WriteLine("İyi Geceler");
 ~~~
+## Karar Yapıları 2
+~~~chsarp
+//Switch Case Kullanımı
+
+            int month = DateTime.Now.Month;
+
+            switch(month)
+            {
+                case 1:
+                Console.WriteLine("Ocak");
+                    break;
+
+                case 2:
+                    Console.WriteLine("Şubat");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Mart");
+                    break;
+
+
+
+                default:
+                    
+                    Console.WriteLine("Hata");
+                break;
+            }
+~~~
