@@ -114,3 +114,20 @@
                 Console.WriteLine(OFex);
             }
 ~~~
+# Homework 5;
+## Karar Döngüleri 1
+~~~csharp
+//  If Else Between Kullanımı
+            int time = DateTime.Now.Hour;
+
+            if ((time >= 08.00) && (time <= 12.00))
+            {
+                Console.WriteLine("Günaydın");
+            }
+            else if (((18.00 <= time) && (time < 22.00)))
+            {
+                Console.WriteLine("İyi günler");
+            }
+            else
+            Console.WriteLine("İyi Geceler");
+~~~
