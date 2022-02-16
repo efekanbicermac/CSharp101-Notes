@@ -132,7 +132,7 @@
             Console.WriteLine("İyi Geceler");
 ~~~
 ## Karar Yapıları 2
-~~~chsarp
+~~~csharp
 //Switch Case Kullanımı
 
             int month = DateTime.Now.Month;
