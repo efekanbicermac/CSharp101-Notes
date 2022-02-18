@@ -165,7 +165,7 @@
 //-----FOR DONGUSU-----
             //Ekrana girilen sayıya kadar olan çift sayilari ekrana yazdır
             Console.WriteLine("Lutfen bir sayi giriniz : ");
-            int sayi = int.Parse(Console.ReadLine());
+            int sayi = int.Parse(Console.ReadLine()); // Console.ReadLine sadece int deger alabildigi icin Parse kullanmamiz gerekti
 
             for (int i = 0; i < sayi; i++)
             {
@@ -192,5 +192,18 @@
 
             Console.WriteLine($"Tek sayilarin toplami {t}");
             Console.WriteLine($"Cift sayilarin toplami {c}");
+            
+            //----Break, Continue----
+
+            for (int i = 0; i < 20; i++)
+            {
+                if(i==14)
+                { break; }
+                if(i==8)
+                { continue; }
+                Console.WriteLine(i);
+                
+            }
+            
 ~~~
 
