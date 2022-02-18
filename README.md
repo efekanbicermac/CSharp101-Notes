@@ -159,3 +159,39 @@
                 break;
             }
 ~~~
+# Homework 6 ;
+## Döngüler 1 
+~~~csharp
+//FOR DONGUSU
+
+            //Ekrana girilen sayıya kadar olan çift sayilari ekrana yazdır
+            Console.WriteLine("Lutfen bir sayi giriniz : ");
+            int sayi = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < sayi; i++)
+            {
+                if(i%2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            //0 Ile 2000 arasindaki sayilarin kendi icindeki toplamini yazdir
+
+            int t = 0;
+            int c = 0;
+
+            for (int i = 0; i < 2000; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    t += i;
+                }
+                else
+                    c += i;
+            }
+
+            Console.WriteLine($"Tek sayilarin toplami {t}");
+            Console.WriteLine($"Cift sayilarin toplami {c}");
+~~~
+
