@@ -162,8 +162,7 @@
 # Homework 6 ;
 ## Döngüler 1 
 ~~~csharp
-//FOR DONGUSU
-
+//-----FOR DONGUSU-----
             //Ekrana girilen sayıya kadar olan çift sayilari ekrana yazdır
             Console.WriteLine("Lutfen bir sayi giriniz : ");
             int sayi = int.Parse(Console.ReadLine());
