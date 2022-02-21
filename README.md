@@ -243,3 +243,49 @@
                 Console.WriteLine(araba);
             }
 ~~~
+# Homework 7;
+## Diziler 1
+~~~csharp
+//Dizi Tanimlama
+
+
+            string[] ArabaMarkalari = new string[5];
+
+            string[] MotorsikletMarkalari = { "Honda", "Kawasaki", "Yamaha" };
+
+            int[] Sayilar = new int[99];
+
+            int[] PlakaKodlari = { 01, 02, 03, };
+
+            string[] Film;
+
+            Film = new string[10];
+
+            //Dizilere Deger Atama ve Erisim
+            Film[4] = "Interstellar";
+
+
+            string[] Yemekler = { "Mercimek", "Yahni", "Salata", "Makarna", "Hamburger" };
+            Console.WriteLine(Yemekler[3]);
+            Console.WriteLine(Yemekler[0]);
+
+
+            //Dongulerle Dizi Kullanimi
+            // Klavyeden girilen n tane sayinin ortalamasini hesaplayan program
+            Console.Write("lUTFEN DIZININ ELEMAN SAYISINI GIRINIZ : ");
+            int diziuzunlugu = int.Parse(Console.ReadLine());
+            int[] sayiDizisi = new int[diziuzunlugu];
+
+            for (int i = 0; i < diziuzunlugu; i++)
+            {
+                Console.Write("Lutfen {0}. sayiyi giriiniz : ", i + 1);
+                sayiDizisi[i] = int.Parse(Console.ReadLine());
+            }
+            int toplam = 0;
+            foreach (var sayi in sayiDizisi)
+            {
+                toplam += sayi;
+                Console.WriteLine($"Ortalama {toplam / diziuzunlugu}");
+
+            }
+~~~
