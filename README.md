@@ -206,4 +206,40 @@
             }
             
 ~~~
+## Döngüler 2 
+~~~csharp
+//-----While Döngüsü------
 
+            //1 den başlayarak console dan girilen sayıya kadar (sayı dahil) ortalama hesaplayaıp console a yazdıran program
+            Console.WriteLine("Lutfen bir sayi giriniz : ");
+            int sayi1 = int.Parse(Console.ReadLine());
+            int sayac = 1;
+            int toplam = 0;
+            while (sayac <= sayi1)
+            {
+                toplam += sayac;
+                sayac++;
+            }
+
+            Console.WriteLine(toplam / sayi1);
+
+
+
+            // A dan Z ye kadar, z dahil olmak uzere  tum harfleri konsola yazdir
+
+
+            char harf = 'a';
+            while (harf <= 'z')
+            {
+                Console.Write(harf);
+                harf++;
+            }
+
+            //Foreach
+
+            string[] arabalar = { "FORD", "MERCEDES", "LADA", "BMW", "NISSAN", "TOYOTA" };
+            foreach (var araba in arabalar)
+            {
+                Console.WriteLine(araba);
+            }
+~~~
