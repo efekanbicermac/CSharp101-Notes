@@ -289,3 +289,47 @@
 
             }
 ~~~
+# Homework 8;
+## Metotlar 1
+~~~csharp
+class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            //Metotlar
+            //erisim_belirteci(int, string) geri_donustipi(void vs) metot_adi(parametrelistesi/arguman)
+            //{
+            // komutlar;
+            // retunn;
+            //}
+
+            int a = 2;
+            int b = 3;
+            Console.WriteLine(a + b);
+            //Static metotlar sadece static metolar icerisinde kullanilabilir.
+            //Metot statik degil ve statik bir metotta uygulanmaya calisiyorsa hata verecekir
+            // Baska bir classtaki metota ulasmak icin o metutun instance sini yani orneklemesini yaratmamiz gerekir
+
+            int sonuc = Topla(a, b);
+            Console.WriteLine(sonuc);
+
+            //Instance yaratma
+            Metotlar ornek = new Metotlar();
+            ornek.EkranaYazdir(Convert.ToString(sonuc));
+        }
+
+        static int Topla(int deger1, int deger2)
+        {
+            return (deger1 + deger2);
+        }
+    }
+    class Metotlar
+    {
+        //Baska bir classtan erisilebilmesi icin public olmasi gerekir
+        //Baska bir classtan metottaki degiskenlere mudahele etmek icin degiskenleri tanimlarken ref eklememiz gerekir (ref a, ref b)
+          public void EkranaYazdir(string veri)
+        {
+            Console.WriteLine(veri);
+        }
+    }
+~~~
