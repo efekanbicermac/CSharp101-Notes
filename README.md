@@ -385,3 +385,49 @@ public static void Main(string[] args)
 
     }
 ~~~
+## Metotlar 3 
+~~~csharp
+public static void Main(string[] args)
+        {
+            //Rekursif(Oz Yinelemeli)
+            //3^4 = 3*3*3*3
+            int result = 1;
+            for (int i = 1; i < 5; i++)
+            {
+                result = result * 3;
+                Console.WriteLine(result);
+                Islemler instance = new();
+                Console.WriteLine(instance.Expo(3, 4));
+            }
+
+            //Extension Metotlar
+            string ifade = " Efekan Bicer";
+            Console.WriteLine(ifade.BoslukKontrol());
+            bool sonuc = ifade.BoslukKontrol();
+            Console.WriteLine(sonuc);
+
+        }
+
+    }
+
+    public class Islemler {
+
+        public int Expo(int sayi, int us)
+        {
+            if (us < 2)
+                return sayi;
+
+            return Expo(sayi, us - 1) * sayi;
+        }
+
+    }
+
+      //Extension classlar static olmak zorunda yoksa erisliemez
+      //this ifadesini eklersek extension olur
+      public static class Extensions
+    {
+        public static bool BoslukKontrol(this string param)
+        {
+            return param.Contains(" ");
+        }
+~~~
