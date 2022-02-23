@@ -333,3 +333,55 @@ class MainClass
         }
     }
 ~~~
+## Metotlar 2 
+~~~csharp
+public static void Main(string[] args)
+        {
+            // Out Parametreler
+            string number = "111";
+            int Outnumber;
+
+            bool sonuc = int.TryParse(number, out Outnumber);
+            if (sonuc)
+            {
+                Console.WriteLine("Cevirildi");
+                Console.WriteLine(Outnumber);
+            }
+            else
+            {
+                Console.WriteLine("Cevirilemedi");
+            }
+            Metotlar2 instance = new Metotlar2();
+            instance.Topla(4, 5, out int toplamSonuc);
+
+            //Metot Overloading(Asiri Yukleme)
+            int ifade = 111;
+            instance.EkranaYazdir(ifade);
+
+            //Metot Imzasi nedir
+            //metotAdi + paranetre sayisi + paranetre
+            //Metot imzasina uymazsak public kismini veya void kismini vs degistitirsek altini cizer hata aliriz
+
+
+        }
+    }
+    class Metotlar2
+    {
+        public void Topla(int a, int b, out int toplam)
+        {
+            toplam = a + b;
+            
+        }
+
+        public void EkranaYazdir(string veri)
+        {
+            Console.WriteLine(veri);
+        }
+                                        //ayni metodu hem string hem de int tipinde olusturduk bu overloadingtir
+        public void EkranaYazdir(int veri)
+        {
+            Console.WriteLine(veri);
+        }
+
+    }
+~~~
