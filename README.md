@@ -1,4 +1,4 @@
-# Homework 1;
+# Notes 1;
 
 ## Kullanıcıdan Adını ve Soyadını Girmesini iste, daha sonra ise kişinin adı ve soyadı ile birlikte tek bir cümlede "Hoşgeldin isim1,soyisim1" şeklinde yazdır.
 ~~~csharp
@@ -10,7 +10,7 @@
             Console.WriteLine($"Welcome {name1} {name2}");
           
 ~~~    
-# Homework 2;
+# Notes 2;
 ## Değişkenler ve Veri Tipleri 
 ~~~csharp
    
@@ -28,7 +28,7 @@
             long l = 4; // 8byte 
             ulong ul = 4; // 16byt
 ~~~   
-# Homework 3;
+# Notes 3;
 ## Operatorler
 ~~~csharp
  //Atama
@@ -76,7 +76,7 @@
 
             // % MOD ALMA YANI BOLME ISLEMINDEN KALANI BULMA
 ~~~
-# Homework 4;
+# Notes 4;
 ## Expection Handler
 ~~~csharp
 //TRY CATCH YONTEMI ILE HATA BULMA
@@ -114,7 +114,7 @@
                 Console.WriteLine(OFex);
             }
 ~~~
-# Homework 5;
+# Notes 5;
 ## Karar Yapıları 1
 ~~~csharp
 //  If Else Between Kullanımı
@@ -159,7 +159,7 @@
                 break;
             }
 ~~~
-# Homework 6 ;
+# Notes 6 ;
 ## Döngüler 1 
 ~~~csharp
 //-----FOR DONGUSU-----
@@ -243,7 +243,7 @@
                 Console.WriteLine(araba);
             }
 ~~~
-# Homework 7;
+# Notes 7;
 ## Diziler 1
 ~~~csharp
 //Dizi Tanimlama
@@ -289,7 +289,7 @@
 
             }
 ~~~
-# Homework 8;
+# Notes 8;
 ## Metotlar 1
 ~~~csharp
 class MainClass
