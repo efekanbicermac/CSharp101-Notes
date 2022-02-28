@@ -431,3 +431,53 @@ public static void Main(string[] args)
             return param.Contains(" ");
         }
 ~~~
+# Notes 9;
+## Hazir Metotlar 1
+~~~csharp
+ // String Metotlar
+
+            string degisken = "IOS'mu Android mi?";
+            string degisken2 = "Xaomi is the BEST!";
+            //Lenght
+            Console.WriteLine(degisken.Length);
+
+            //ToUpper, ToLower
+
+            Console.WriteLine(degisken.ToUpper());
+
+            Console.WriteLine(degisken.ToLower());
+
+            //Contact
+            Console.WriteLine(String.Concat(degisken, "Yada BlackBerryOS mu?"));
+
+            //CompareTO
+            Console.WriteLine(degisken.CompareTo(degisken2));
+            // 1. degisken 2. degiskene esit olursa 0, 1. degisken 2. degiskenden buyukse 1,  1.degisken 2. degiskenden kucukse -1 dondurur
+
+            //Contains
+            Console.WriteLine(degisken.Contains(degisken2));
+            Console.WriteLine(degisken.EndsWith("mi?"));
+            Console.WriteLine(degisken.StartsWith("IOS"));
+
+            //IndexOf
+            Console.WriteLine(degisken.IndexOf("An"));
+
+            //Insert
+            Console.WriteLine(degisken.Insert(0, "Selam, "));
+
+            //PadLeft, PadRight
+            Console.WriteLine(degisken + degisken2.PadLeft(30));//30 a tamamliyacak kadar bosluk ekler PadLeft(30, '-') yazarsak da 30 tane - ekler
+
+            //Remove
+
+            Console.WriteLine(degisken.Remove(10)); // 10. indexten sonrassini siler
+
+            //Replace
+            Console.WriteLine(degisken.Replace("IOS", "iOS"));
+
+            //Split
+            Console.WriteLine(degisken.Split(' ')[1]); // Paranteze yazilanlari es gecer. Burda bosluklari es gectik. Boyle yapinca bosluklari silip bir diziye atti ve bizde 1. indexi getir dedik
+
+            //Substring
+            Console.WriteLine(degisken.Substring(4, 6)); //4. indexten baslayip 6. indexe kadar getir dedik
+~~~
