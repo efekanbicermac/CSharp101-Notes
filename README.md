@@ -481,3 +481,51 @@ public static void Main(string[] args)
             //Substring
             Console.WriteLine(degisken.Substring(4, 6)); //4. indexten baslayip 6. indexe kadar getir dedik
 ~~~
+## Hazir Metotlar 2 
+~~~csharp
+//DateTime ve Math Kutuphanesi
+            Console.WriteLine(DateTime.Now);
+            Console.WriteLine(DateTime.Now.Date);
+            Console.WriteLine(DateTime.Now.Day);
+            Console.WriteLine(DateTime.Now.Year);
+            Console.WriteLine(DateTime.Now.Second);
+            Console.WriteLine(DateTime.Now.Minute);
+            Console.WriteLine(DateTime.Now.Month);
+            Console.WriteLine(DateTime.Now.Hour);
+
+            Console.WriteLine(DateTime.Now.DayOfWeek);
+            Console.WriteLine(DateTime.Now.DayOfYear);
+
+
+            Console.WriteLine(DateTime.Now.ToLongDateString());
+            Console.WriteLine(DateTime.Now.ToShortDateString());
+
+            Console.WriteLine(DateTime.Now.ToShortTimeString());
+            Console.WriteLine(DateTime.Now.ToShortTimeString());
+
+            Console.WriteLine(DateTime.Now.AddDays(2));
+            Console.WriteLine(DateTime.Now.AddHours(3));
+            Console.WriteLine(DateTime.Now.AddSeconds(5));
+            Console.WriteLine(DateTime.Now.AddMonths(7));
+            Console.WriteLine(DateTime.Now.AddYears(9));
+            Console.WriteLine(DateTime.Now.AddMilliseconds(50));
+
+            //Math Kutuphanesi
+
+            Console.WriteLine(Math.Abs(-25));
+            Console.WriteLine(Math.Sin(10));
+            Console.WriteLine(Math.Cos(10));
+            Console.WriteLine(Math.Tan(10));
+
+            Console.WriteLine(Math.Ceiling(23.4));//en dusuk olabilecege yuvarlar yani 23
+            Console.WriteLine(Math.Round(23.2));// Yuvarlar 23
+            Console.WriteLine(Math.Round(23.8));//24
+            Console.WriteLine(Math.Floor(23.8));// en kucuk tam sayiyi yuvarlar 23
+
+            Console.WriteLine(Math.Min(3, 6));
+            Console.WriteLine(Math.Max(3, 6));
+
+            Console.WriteLine(Math.Pow(3, 6));// 3^6 yi alir
+            Console.WriteLine(Math.Sqrt(3));// Karekokunu alir
+
+~~~
