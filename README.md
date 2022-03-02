@@ -529,3 +529,64 @@ public static void Main(string[] args)
             Console.WriteLine(Math.Sqrt(3));// Karekokunu alir
 
 ~~~
+# Notes 10;
+## Listeler 1
+~~~csharp
+//KOLEKSIYONLAR
+
+            //Generic List (System.Collections.Generic)
+            //List<T> class   T object turundedir.
+
+            List<int> numaraListesi = new List<int>();
+
+            numaraListesi.Add(5);
+            numaraListesi.Add(4);
+            numaraListesi.Add(10);
+            numaraListesi.Add(16);
+            numaraListesi.Add(2);
+
+
+            List<string> isimListesi = new List<string>();
+
+            isimListesi.Add("Ahmet");
+            isimListesi.Add("Mehmet");
+            isimListesi.Add("Selim");
+            isimListesi.Add("Emir");
+            isimListesi.Add("Halil");
+            isimListesi.Add("Emre");
+            isimListesi.Add("Tayfun");
+
+            //Count 
+            Console.WriteLine(isimListesi.Count);
+            Console.WriteLine(numaraListesi.Count);
+
+            foreach (var isim in isimListesi)
+            {
+                Console.WriteLine(isim);
+            }
+            foreach (var numara in numaraListesi)
+            {
+                Console.WriteLine(numara);
+            }
+            //Contains ile Liste icinde arama
+            if (numaraListesi.Contains(10))
+                Console.WriteLine("Numara Listesinde 10 bulundu!");
+
+            //Listeden Eleman Cikartma
+
+            numaraListesi.Remove(10);
+            isimListesi.Remove("Halil");
+
+            //Eleman Icerisinde Index Arama
+            Console.WriteLine(isimListesi.BinarySearch("Emir"));
+
+            //Diziyi Listeye Cevirme
+
+            string[] kumesHayvanlari = { "Tavuk", "Horoz", "Hindi" };
+
+            List<string> kumeshayvanlariListesi = new List<string>(kumesHayvanlari);
+
+            //Liste Temizleme
+            kumeshayvanlariListesi.Clear();
+
+~~~
