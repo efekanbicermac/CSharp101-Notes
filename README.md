@@ -590,3 +590,47 @@ public static void Main(string[] args)
             kumeshayvanlariListesi.Clear();
 
 ~~~
+## Koleysiyonlar 2
+~~~csharp
+//ArrayList System.Collections
+
+            ArrayList liste = new ArrayList();
+            liste.Add("Mehmet");
+            liste.Add(17);
+            liste.Add(6);
+            liste.Add(true);
+            liste.Add('B');
+
+            //Verilerini erisim
+            Console.WriteLine(liste[2]);
+
+            foreach (var item in liste)
+            {
+                Console.WriteLine(item);
+            }
+
+            //AddRange (Listeye ekleme yapma)
+
+            string[] ebeveyn = { "Ali", "Fatma", "Orhan" };
+            liste.AddRange(ebeveyn); // Sadece Collection tiplerini ekleyebiliriz
+
+            //Sort
+            liste.Sort(); // Sort int32 leri siralamaya baslar fakat bu arrayliste her tipten veri girdik bu yuzden compile error verecektir
+
+            //Binary Search
+            Console.WriteLine(liste.BinarySearch(5));
+
+            //Reverse
+            liste.Reverse();
+            foreach (var item in liste)
+            {
+                Console.WriteLine(item);
+            }
+
+            //Clear
+            liste.Clear();
+            foreach (var item in liste)
+            {                               //Foreach zorunluluk degil. Yapilan islemi gormek icin yazdim. 
+                Console.WriteLine(item);
+            }
+~~~
