@@ -530,7 +530,7 @@ public static void Main(string[] args)
 
 ~~~
 # Notes 10;
-## Listeler 1
+## Koleksiyonlar 1
 ~~~csharp
 //KOLEKSIYONLAR
 
