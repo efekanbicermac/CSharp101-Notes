@@ -634,3 +634,48 @@ public static void Main(string[] args)
                 Console.WriteLine(item);
             }
 ~~~
+## Koleksiyonlar 3
+~~~csharp
+//Dictionary (System.Collections.Generic)
+
+            Dictionary<int, string> renkler = new Dictionary<int, string>();
+
+            renkler.Add(1, "siyah");
+            renkler.Add(2, "mavi");
+            renkler.Add(3, "beyaz");        //TKey ve Tvalue olarak calisan bu sistem, TKey yani kodudur. Mesela 3 u cagir dersem beyaz gelir
+            renkler.Add(4, "gri");
+
+            //Dictionary dizisinin elemanlarina erisim
+            Console.WriteLine(renkler[2]);
+
+            foreach (var item in renkler)
+            {
+                Console.WriteLine(item); 
+            }
+
+            //Count
+            Console.WriteLine(renkler.Count);
+
+            //Contains
+            Console.WriteLine(renkler.ContainsKey(4));         //Contains tip olarak value ve keyden olustugu icin contains syntaxi boyle.
+            Console.WriteLine(renkler.ContainsValue("siyah"));
+
+            //Remove
+            renkler.Remove(3);
+            foreach (var item in renkler)
+            {
+                Console.WriteLine(item);
+            }
+
+            //Keys
+            foreach (var item in renkler.Keys)
+            {
+                Console.WriteLine(item);
+            }
+
+            //Values
+            foreach (var item in renkler.Values)
+            {
+                Console.WriteLine(item);
+            }
+~~~
