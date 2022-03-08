@@ -679,3 +679,67 @@ public static void Main(string[] args)
                 Console.WriteLine(item);
             }
 ~~~
+
+# Notes 11;
+## Sinif Kavrami 1
+~~~csharp
+ //Soz Dizini
+            // class SinifAdi
+            //{
+            //  [Erisim Belirleyici] [Veri Tipi] OzellikAdi;
+            //  [Erisim Belirleyici] [Geri Donus Tipi] metotAdi(Parametre Listesi)
+            //  {
+            //     //Metot Komutlari
+            //  }
+            //}
+
+            //Erisim Berileyicileri
+            //
+            //  public
+            //  private
+            //  protected
+            //  internal
+
+            Personeller personel1 = new Personeller();
+            personel1.CalisanAdi = "Eray";
+            personel1.CalisanSoyadi = "Ersoy";
+            personel1.CalisanNo = 11111;
+            personel1.CalisaninDepartmani = "Frontend D.";
+
+            personel1.PersonelBilgiler();
+            Console.WriteLine("-------------");
+
+            Personeller personel2 = new Personeller();
+            personel2.CalisanAdi = "Cafer Ihsan";
+            personel2.CalisanSoyadi = "Biraci";
+            personel2.CalisanNo = 22222;
+            personel2.CalisaninDepartmani = "Hademe D,";
+
+
+            personel2.PersonelBilgiler();
+            Console.WriteLine("-------------");
+        }
+    }
+
+    class Personeller
+    {
+        public string CalisanAdi;
+
+        public string CalisanSoyadi;
+
+        public int CalisanNo;
+
+        public string CalisaninDepartmani;
+
+        public void PersonelBilgiler()
+        {
+            Console.WriteLine("Calisan Adi:{0}", CalisanAdi);
+
+            Console.WriteLine("Calisan Soyadi:{0}", CalisanSoyadi);
+
+            Console.WriteLine("Calisan No:{0}", CalisanNo);
+
+            Console.WriteLine("Calisanin Departmani:{0}", CalisaninDepartmani) ;
+        }
+    }
+~~~
