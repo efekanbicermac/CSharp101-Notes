@@ -801,3 +801,108 @@ public static void Main(string[] args)
 }
 
 ~~~
+## Sinif Kavrami 3
+~~~csharp
+//Encapsulation
+
+            Customers customer = new Customers();
+            customer.CustomerName = "Ragnar";
+            customer.CustomerSurname = "Lothbrok";
+            customer.CustomerNo = 15;
+            customer.CustomerScore = 1000;
+            customer.GetTheCustomerInfo();
+
+            customer.IncreaseScore();
+            customer.GetTheCustomerInfo();
+
+
+            Customers customer2 = new Customers();
+            customer.CustomerName = "Bjron";
+            customer.CustomerSurname = "Ironside";
+            customer.CustomerNo = 12;
+            customer.CustomerScore = 1500;
+            customer.GetTheCustomerInfo();
+
+            customer.DecreaseScore();
+            customer.GetTheCustomerInfo();
+
+
+
+
+        }
+    }
+
+    class Customers
+    {
+        private string customerName; // Sag tik quick actions a tiklayarak alttan encapsulate field and use property ye tikliyoruz
+
+        private string customerSurname;
+
+        private int customerNo;
+
+        private int customerScore;
+
+
+
+
+        public string CustomerName { get => customerName; set => customerName = value; }
+
+        public string CustomerSurname { get => customerSurname; set => customerSurname = value; }
+
+        public int CustomerNo { get => customerNo; set => customerNo = value; }
+
+        public int CustomerScore
+        {
+
+            get => customerScore;
+
+            set
+            {
+                if(customerScore <= 0)      //Musteri Puani 0 dan kucuk olamayacagi icin boyle bir kod yazdik
+                {
+                    Console.WriteLine("Puan 0 in altinda olamaz ");
+                    customerScore = 0;
+                }
+                
+
+                else
+               customerScore = value;
+               
+               // Simdi bu sinifin constructor unu yaratalim
+        // Constructor class ile ayni isime sahip olmak zorunda ayrica herhangi bir donus tipi yazilamaz
+
+        public Customers(string customerName, string customerSurname, int customerNo, int customerScore)
+        {
+            CustomerName = customerName;
+            CustomerSurname = customerSurname;
+            CustomerNo = customerNo;
+            CustomerScore = customerScore;
+        }
+
+        public Customers()
+        {
+
+        }
+
+        public void GetTheCustomerInfo()
+        {
+            Console.WriteLine("------Musteri Bilgiler-------");
+            Console.WriteLine("Musteri Ismi :{0} ",this.CustomerName);
+            Console.WriteLine("Musteri Soyadi :{0} ", this.CustomerSurname);
+            Console.WriteLine("Musteri No :{0} ", this.CustomerNo);
+            Console.WriteLine("Musteri Puani :{0} ", this.CustomerScore);
+        }
+
+        public void IncreaseScore()
+        {
+            this.CustomerScore = this.CustomerScore +1;
+
+        }
+
+        public void DecreaseScore()
+        {
+            this.CustomerScore = this.CustomerScore - 1;
+        }
+
+            } 
+~~~
