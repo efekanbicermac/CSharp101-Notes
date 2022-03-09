@@ -743,3 +743,61 @@ public static void Main(string[] args)
         }
     }
 ~~~
+## Sinif Kavrami 2
+~~~csharp
+//Soz Dizini
+           //Constructor yapimi , Personel adinda bir class actik ve bu klasi main class ta instance yaratar hallettik. Personeller adinda constructor method yazdik
+
+            Personeller personel1 = new Personeller("Eray","Ersoy",11111,"Frontend D.");
+            
+            personel1.PersonelBilgiler();
+            Console.WriteLine("-------------");
+
+            Personeller personel2 = new Personeller("Cafer Ihsan","Biraci",22222,"Hademe D.");
+
+            personel2.PersonelBilgiler();
+            Console.WriteLine("-------------");
+        }
+    }
+
+    class Personeller
+    {
+        public string CalisanAdi;
+
+        public string CalisanSoyadi;
+
+        public int CalisanNo;
+
+        public string CalisaninDepartmani;
+
+
+        public Personeller(string CalisanAdi, string CalisanSoyadi, int CalisanNo, string CalisaninDepartmani)
+        {
+            this.CalisanAdi = CalisanAdi;
+            this.CalisanSoyadi = CalisanSoyadi;
+            this.CalisanNo = CalisanNo;
+            this.CalisaninDepartmani = CalisaninDepartmani;
+
+
+
+        }
+
+        public Personeller() { } 
+
+        public void PersonelBilgiler()
+        {
+            Console.WriteLine("Calisan Adi:{0}", CalisanAdi);
+
+            Console.WriteLine("Calisan Soyadi:{0}", CalisanSoyadi);
+
+            Console.WriteLine("Calisan No:{0}", CalisanNo);
+
+            Console.WriteLine("Calisanin Departmani:{0}", CalisaninDepartmani) ;
+        }
+    }
+
+
+
+}
+
+~~~
