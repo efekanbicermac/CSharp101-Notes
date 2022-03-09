@@ -803,7 +803,7 @@ public static void Main(string[] args)
 ~~~
 ## Sinif Kavrami 3
 ~~~csharp
-//Encapsulation
+//Encapsulation ve Property Kavrami
 
             Customers customer = new Customers();
             customer.CustomerName = "Ragnar";
