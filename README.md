@@ -1251,4 +1251,8 @@ public override void KorunmaIcgudusu()
                                                                // Bu metotun ana dizininde yani canlilar klasinda ise genel bicimde Hayvanlar kendini korur                                                                      // demistik
                                                                // Yani istedigimiz sekilde bicimlendirmemize yariyor bu sistem 
         }
+        
+                                             //-------Sealed Class------
+//Sealed class asla kalitim alinmasini istemedigimiz classlara yazilir. Ornegin Canlilar Clasini Su sekilde "public sealed class Canlilar" seklinde yazsaydik (tabiki tirnak isaretleri olmadan) Canlilar classindan asla kalitim alamazdik                                           
+                                             
 ~~~
