@@ -906,3 +906,79 @@ public static void Main(string[] args)
 
             } 
 ~~~
+## Sınıf Kavramı 4
+~~~csharp
+class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Çalışan Sayısı :{0} ", Personel.CalisanSayisi);
+
+            Personel personel1 = new Personel("Tamer", "Kuzgun", "Istıhbarat"); // Private oldugu icin sadece public kismindaki isim soyisim departman uzerinde setleyebiliriz
+            Console.WriteLine("Çalışan Sayısı :{0} ", Personel.CalisanSayisi); // Personel ekledigimiz icin kontrol amacli ekrana yazdirdim
+            Personel personel2 = new Personel("Seyit", "Karakahyali", "Ozel Harekat");
+            Personel personel3 = new Personel("Mucahit", "Sonay", "Istihbarat");
+            Console.WriteLine("Çalışan Sayısı :{0} ", Personel.CalisanSayisi); // Personel ekledigimiz icin kontrol amacli ekrana yazdirdim
+
+
+            //Islemler islemer = new Islemler();
+            //islemler.                                // Bu sekilde yazarsak static class oldugu icin bize hicbir sonuc vermez altini cizer
+
+            // Static Classlar direk adiyla yazilir
+
+            //Islemler.Topla(100, 200);
+            //Islemler.Çıkar(200, 50);  // Bu sekilde yazilir
+
+            Console.WriteLine("Bu islemin sonucu : {0}", Islemler.Topla(100, 125));
+            
+
+        }
+    }
+
+    class Personel
+    {
+        private static int calisanSayisi;
+
+        public static int CalisanSayisi { get => calisanSayisi; } //Sadece bu class uzerinden duzenleme yapilmasini istedigimiz icin set i kaldirdik
+
+
+        private string isim;
+
+        private string soyisim;
+
+        private string departman;
+
+
+        static Personel()
+        {                     //Static kurucularin erisim belirteci olmaz (public, private vs.)
+            calisanSayisi = 0;
+
+        }
+
+
+        public Personel(string isim, string soyisim, string departman)
+        {
+            this.isim = isim;
+            this.soyisim = soyisim;
+            this.departman = departman;
+            calisanSayisi++;
+            this.isim = isim;
+            this.soyisim = soyisim;
+            this.departman = departman;
+        }
+    }
+
+    //Static Class Ornegi
+    static class Islemler
+    {
+        public static long Topla(int sayi1, int sayi2)
+        {
+            return sayi1 + sayi2;
+        }
+
+        public static long Çıkar(int sayi1, int sayi2)
+        {
+            return sayi1 - sayi2;
+        }
+    }
+~~~
