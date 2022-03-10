@@ -1210,3 +1210,45 @@ class MainClass
         }
       
 ~~~
+## OOP 2
+### Ayni proje uzerinden devam ettigim icin butun classlari buraya yazmayacagim. OOP 1 deki notlarin degisen kisimlarini atacagim
+~~~csharp
+                                             //---------POLYMORPHISM VE SEALED CLASS---------------
+
+//====Canlilar Classi===
+public virtual void KorunmaIcgudusu()
+        {
+            Console.WriteLine("Canlilarin hepsi kendini tehlikelere karsi korur"); //Polymorphism den yararlanarak Sanal bir metot olusturduk
+                                                                                   //bunu virtual syntaxindan yararlanark yaptik ve boylece sanal bir metot yazdik
+                                                                                   // ve bu metotu kullanacagimiz yere bu metotu override etmemiz gerek.
+                                                                                   // Bu metotu Hayvanlar sinifina override ederek orneklendirelim
+        }
+//===Hayvanlar Classi=====
+public override void KorunmaIcgudusu()
+        {                                      // Gordungunuz gibi polymorphismden yararlanarak virtual metot olusturmustuk ve bunu bu metotta override ettik 
+            base.KorunmaIcgudusu();
+            Console.WriteLine("Hayvanlar saldirilara karsi kendini korur");
+        }
+     }
+     
+      public class Kuslar : Hayvanlar
+    {
+        public Kuslar()
+        {
+            base.Beslenme();
+            base.Bosaltim();
+            base.KorunmaIcgudusu(); //Bu metotu burada da kullandik
+        }
+        
+//======Bitkiler Classi=======
+
+        public override void KorunmaIcgudusu()
+        {                                        //Override islemini burada da yaptik 
+            base.KorunmaIcgudusu();
+            Console.WriteLine("Bitkiler Gunese Tepki verir");  // Gordugunuz gibi polymorphism sayesinde istedigimiz gibi bicimlendirebiliyoruz
+                                                               // Hayvanlar classinda hayvanlar saldirilara karsi kendini korur diye bir mesaj yazdirmistik.
+                                                               // Ayni metotu yine kullandik fakat burda Bitkiler gunese tepki verir dedik
+                                                               // Bu metotun ana dizininde yani canlilar klasinda ise genel bicimde Hayvanlar kendini korur                                                                      // demistik
+                                                               // Yani istedigimiz sekilde bicimlendirmemize yariyor bu sistem 
+        }
+~~~
