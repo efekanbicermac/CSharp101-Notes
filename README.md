@@ -912,6 +912,9 @@ class MainClass
     {
         public static void Main(string[] args)
         {
+        
+          //Static sinif ve uyeler
+          
             Console.WriteLine("Çalışan Sayısı :{0} ", Personel.CalisanSayisi);
 
             Personel personel1 = new Personel("Tamer", "Kuzgun", "Istıhbarat"); // Private oldugu icin sadece public kismindaki isim soyisim departman uzerinde setleyebiliriz
