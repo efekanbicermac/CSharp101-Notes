@@ -1039,3 +1039,70 @@ class MainClass
         }
     }
 ~~~
+## Sinif Kavrami 6 
+~~~csharp
+class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            //Enum
+            //Enumlar okunabilirligi artirmak icin kullanilir.
+
+            Console.WriteLine(Gunler.Pazartesi);
+            Console.WriteLine((int)Gunler.Persembe); // Boyle casting ini yaparsak bize numeric ini verecektir
+
+
+            // Hava durumu ile Orneklendirerek enumlarin kolayligindan bahsedelim
+
+            int sicaklik = 32;
+
+            if(sicaklik <= (int)HavaDurumu.Normal)
+            {
+                Console.WriteLine("Havanin Biraz Daha Isinmasini Bekleseniz daha iyi olur ");
+
+            }
+            else if(sicaklik >= (int)HavaDurumu.Sicak)
+            {
+                Console.WriteLine("Hava Asiri Sicak Sapka takmayi ve gunes kremi surmeyi unutmayin");
+            }
+            else if(sicaklik == (int)HavaDurumu.Normal)
+            {
+                Console.WriteLine("Mukemmel bir hava var. Disari cikip biraz soluklanin");
+            }
+            
+        }
+
+
+
+
+    }
+
+    enum Gunler
+    {
+        Pazartesi,
+
+        Sali,
+
+        Carsamba,  //Enum aslinda numeric olan veriye isim koymamizi saglar gibi dusunebiliriz. Salinin degeri 1 iken cuma nin degeri 4 tur gibi.
+
+        Persembe,
+
+        Cuma,           //Enumlar her zaman ardisik gider. Mesela Cuma = 23 yazarsam(boyle deger verebiliriz ) Cumartesi 24 olacaktir.
+                        
+        Cumartesi,
+
+        Pazar
+    }
+    
+    enum HavaDurumu
+    {
+        Soguk = 5,
+
+        Normal = 20,
+
+        Sicak = 25,
+
+        CokSicak = 35
+
+    }
+~~~
