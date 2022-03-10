@@ -985,3 +985,57 @@ class MainClass
         }
     }
 ~~~
+## Sınıf Kavramı 5
+~~~csharp
+class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            //Struct Kavrami
+
+            Dikdortgen dikdortgen = new Dikdortgen();
+            dikdortgen.KisaKenar = 5;
+            dikdortgen.UzunKenar = 4;
+
+            Console.WriteLine("Dikdortgenin alani : {0}", dikdortgen.AlanHesapla());
+
+
+            Dikdortgen_Struct dikdortgen_Struct;
+            dikdortgen_Struct.KisaKenar = 5;          // Struct ile yazdigimizda new dikdortgen_struct yazmadan direk yazabiliriz 
+            dikdortgen_Struct.UzunKenar = 4;
+
+            Console.WriteLine("Dikdortgenin alani : {0}", dikdortgen_Struct.AlanHesapla());
+
+        }
+
+
+
+
+    }
+
+    class Dikdortgen
+    {
+        public int KisaKenar;
+
+        public int UzunKenar;
+
+        public long AlanHesapla()
+        {
+            return this.KisaKenar * this.UzunKenar;
+        }
+
+    }
+
+    struct Dikdortgen_Struct
+    {
+
+        public int KisaKenar;
+
+        public int UzunKenar;
+
+        public long AlanHesapla()
+        {
+            return this.KisaKenar * this.UzunKenar;
+        }
+    }
+~~~
