@@ -1106,3 +1106,107 @@ class MainClass
 
     }
 ~~~
+# Notes 12;
+## OOP 1 
+### Not: Bu notta birden fazla class oldugu icin ayri sekilde belirtecegim
+~~~csharp
+                                // ------INHERITANCE(KALITIM)-------
+  //======CANLILAR CLASSI========
+  public class Canlilar
+    {
+        protected void Beslenme()
+        {
+            Console.WriteLine("Her canli beslenir");
+        }
+
+        public void Solunum()
+        {
+            Console.WriteLine("Her canli farkli sekillerde olsa da solunum yapar"); 
+
+        }
+
+        public void Bosaltim()
+        {
+            Console.WriteLine("Her canli bosaltim yapar");
+        }
+    }
+    
+    //======== BITKILER CLASSI ========
+    public class Bitkiler:Canlilar
+     {
+        protected void Fotosentez()
+        {
+            Console.WriteLine("Bitkiler fotosentez yapar");
+
+        }
+     }
+
+    public class TohumluBitkiler: Bitkiler // : isareti kalitim yapmamizi saglar : nin sagindaki ust sinif yani kalitim alinan siniftir               
+    {
+
+       public TohumluBitkiler() // Fotosentez metoduna protected dedigimiz icin bir constructor yaratiyoruz
+        {
+            base.Fotosentez();     //Base kalitim aldigimiz ust sinifin metotlarina erismemizi saglar  
+
+        }
+
+        public void TohumlaCogalma()
+        {
+            Console.WriteLine("Tohumlu bitkiler tohumla cogalir");
+        }
+
+    }
+
+    public class TohumsuzBitkiler:Bitkiler
+    {
+        public void TohumsuzCogalma()
+        {
+            Console.WriteLine("Tohumsuz bitkiler sporla cogalir ");
+        }
+    }
+    
+    //========HAYVANLAR CLASSI=========
+    public class Hayvanlar:Canlilar
+     {
+        
+
+        public void Adaptasyon()
+        {
+            Console.WriteLine("Her hayvan adaptasyon kurar");
+        }
+
+     }
+
+    public class Surungenler:Hayvanlar // : isareti kalitim yapmamizi saglar : nin sagindaki ust sinif yani kalitim alinan siniftir
+    {
+        public Surungenler()
+        {
+            base.Beslenme();  //Beslenme metotunu protected yaptigmiz icin ve surungenlerin de bundan kalitim almasi gerektigi icin constructor yarattik
+        }
+
+        public void SurunerekHareketEtmek()
+        {
+            Console.WriteLine("Surungenler Surunerek Hareket Eder");
+        }
+    }
+
+    public class Kuslar:Hayvanlar
+    {
+        public void Ucmak()
+        {
+            Console.WriteLine("Kuslar Ucar");
+        }
+    }
+    
+    //=======PROGRAM.CS=============
+    public static void Main(string[] args)
+        {
+            TohumluBitkiler tohumluBitki = new TohumluBitkiler();
+         
+
+            Kuslar guvercin = new Kuslar();
+            guvercin.Adaptasyon();     //Aslinda Kuslar metotuna  adaptasyon diye bir metot yazmadik. Kalitim sayesinde yazabildik
+
+        }
+      
+~~~
