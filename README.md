@@ -1333,4 +1333,5 @@ public class FileLogger : ILogger
             Console.WriteLine("Database'e yazar");
         }
     }
-~~~csharp
+
+~~~
