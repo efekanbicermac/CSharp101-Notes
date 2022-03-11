@@ -1335,3 +1335,75 @@ public class FileLogger : ILogger
     }
 
 ~~~
+## OOP 4
+~~~csharp
+
+                                     //Abstract Class
+ //Aşağıda gözüktüğü gibi 3 farklı model arabamız var hepsinin rengi, markası, motor gücü farklı fakat aynı olan tek şey kaç tekerlekli olduğu. Hepsi 4 tekerelek //olduğu için her seferinde instance yaratırken yazmaktansa bir abstract sınıfı açıp içine 4 tekerlek olduğu yazdık. Böylece her seferinde yazmaktan kurtulduk 
+//====IOtomobil(interface) Classi=====
+
+public interface IOtomobil
+    {
+        MotorGucu MotorHacmiNe();
+
+        Marka MarkasiNe();
+
+        Renk RengiNe();
+
+        int KaçTekerlekli();
+    }
+//======SabitlerEnum=======
+public class SabıtlerEnum
+    {
+        public enum MotorGucu
+        {
+          BinIkiYuz,
+
+          BinAltiYuz,
+
+          IkiBin
+          
+        }
+        public enum Marka
+        {
+            Ford,
+
+            Audi,
+
+            Renault
+        }
+
+        public enum Renk
+        {
+            Turuncu,
+
+            Beyaz,
+
+            Siyah
+        }
+        
+    }
+    
+//=====Program.cs=====
+public static void Main(string[] args)
+        {
+            Mondeo mondeo = new Mondeo();
+            Console.WriteLine(mondeo.MarkasiNe().ToString());
+
+            A5 a5 = new A5();
+            Console.WriteLine(a5.MarkasiNe().ToString());
+
+            Clio clio = new Clio();
+            Console.WriteLine(clio.MarkasiNe().ToString());
+        }
+        
+//======AbstractOtomobil Classi========
+public abstract class AbstractOtomobil
+    {
+        public int KacTekerlekli()
+        {                                //Her araba 4 teker oldugu icin tek tek her classa yazmaktan kurtulduk
+            return 4;
+        }
+    }
+    
+~~~
