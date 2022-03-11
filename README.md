@@ -1256,3 +1256,81 @@ public override void KorunmaIcgudusu()
 //Sealed class asla kalitim alinmasini istemedigimiz classlara yazilir. Ornegin Canlilar Clasini Su sekilde "public sealed class Canlilar" seklinde yazsaydik (tabiki tirnak isaretleri olmadan) Canlilar classindan asla kalitim alamazdik                                           
                                              
 ~~~
+## OOP 3 
+~~~csharp
+//===Program.cs====
+//Interface (Arayuz)
+
+            //Interfacelere I harfi ile baslar
+
+
+            // Interfaceler new ile olusturumalaz instance yapilamaz. LogManager Classinda nasil instance olarak yaratilabilecegini yazdim
+
+            //(bunlar baska loggerlerimiz kalitim almis halde bunlar new ile yaratilabilinir)
+
+
+            FileLogger fileLogger = new FileLogger();
+            fileLogger.WriteLog();
+
+            DataBaseLogger dataBaseLogger = new DataBaseLogger();
+            dataBaseLogger.WriteLog();
+
+            SmsLogger smsLogger = new SmsLogger();
+            smsLogger.WriteLog();
+
+
+            //Hepsini boyle ayri ayri yaratip yazmaktansa LogManager ile kisa bir sekilde yazabilirz bu kadar ugrasmaya gerek yok
+
+            LogManager logManager = new LogManager(new FileLogger());
+            logManager.WriteLog();
+            
+//=====LogManager.cs====
+public class LogManager:ILogger
+    {
+        public ILogger _logger;
+
+        public LogManager(ILogger logger)
+        {
+            _logger = logger;
+        }
+
+        public void WriteLog()
+        {
+            _logger.WriteLog();
+        }
+    }
+//=====ILogger=====
+public interface ILogger
+    {
+        void WriteLog();
+    }
+//=====SmsLogger====
+public class SmsLogger : ILogger
+    {
+        public void WriteLog()
+        {
+            Console.WriteLine("Sms Olarak Log yazarim");
+           
+        }
+    }
+
+
+//=====FileLogger====
+public class FileLogger : ILogger
+    {
+        public void WriteLog()
+        {
+            Console.WriteLine("Dosyaya log yazar");
+            
+        }
+    }
+
+//=====DatabaseLogger=====
+ public class DataBaseLogger : ILogger
+    {
+        public void WriteLog()
+        {
+            Console.WriteLine("Database'e yazar");
+        }
+    }
+~~~csharp
